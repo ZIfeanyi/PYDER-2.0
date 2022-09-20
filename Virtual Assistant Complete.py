@@ -53,7 +53,7 @@ def speak(audio):
 	
 	# setter method .[0]=male voice and
 	# [1]=female voice in set Property.
-	engine.setProperty('voice', voices[0].id)
+	engine.setProperty('voice', voices[1].id)
 	
 	# Method for the speaking of the assistant
 	engine.say(audio)
@@ -99,7 +99,7 @@ def Hello():
 	# This function is for when the assistant
 	# is called it will say hello and then
 	# take query
-	speak("hello if arnee I am your desktop assistant Tell me how may I help you")
+	speak("hello if arnee I am your desktop assistant, Tell me how may I help you")
 
 
 def Take_query():
@@ -119,26 +119,70 @@ def Take_query():
 		# query matches and we get the perfect
 		# output
 		query = takeCommand().lower()
-		if "open google" in query:
-			speak("Opening Google ")
+		if "open games" in query:
+			speak("Opening Games ")
 			
 			# in the open method we just to give the link
 			# of the website and it automatically open
 			# it in your default browser
-			webbrowser.open("www.google.com")
+			webbrowser.open("https://www.coolmathgames.com/")
 			continue
-			
-		elif "which day it is" in query:
+		
+                        
+
+		elif "translate" in query:
+			speak("loading translator ")
+			webbrowser.open("https://translate.google.com/")
+			continue
+
+		elif "play classic fm" in query:
+			speak("opening classic fm in you browser")
+			webbrowser.open("https://www.globalplayer.com/live/classicfm/uk/")
+			continue
+
+		elif "play premier praise" in query:
+			speak("opening premier praise in you browser")
+			webbrowser.open("https://www.premierpraise.com/radio-windowed")
+			continue
+
+		
+
+		elif "music" in query:
+			speak("playing music ")
+			webbrowser.open("https://www.youtube.com/watch?v=l_9y2czDCaY")
+			continue
+
+		elif "joke" in query:
+			speak("Ok,  Let me think ")
+			joke=pyjokes.get_joke(language='en', category= 'neutral')
+			speak(joke)
+			speak("hahaha ")
+
+
+		elif "created you" in query:
+			speak("Coder Ifarnee created me, I will take you to his website and github account ")
+			webbrowser.open("https://github.com/CoderIfeanyi")
+			webbrowser.open("https://coderifeanyi.github.io/Ifeanyi-Website/")
+			continue
+
+		elif "homework" in query:
+			speak("opening homework sites ")
+			webbrowser.open("https://www.satchelone.com/")
+			webbrowser.open("https://vle.mathswatch.co.uk/vle/")
+			continue
+
+               
+		elif "day" in query:
 			tellDay()
 			continue
 		
-		elif "tell me the time" in query:
+		elif "time" in query:
 			tellTime()
 			continue
 		
 		# this will exit and terminate the program
 		elif "close program" in query:
-			speak("Bye. Check Out GFG for more exciting things")
+			speak("goodBye. Check Out CoderIfarnee on Github for more projects")
 			exit()
 		
 		elif "who is" in query:
@@ -156,7 +200,7 @@ def Take_query():
 			speak(result)
 		
 		elif "tell me your name" in query:
-			speak("I am PYDER. Your desktop Assistant")
+			speak("I am PYDER, Coded by Ifarnee and Your desktop Assistant")
 
 if __name__ == '__main__':
 	
