@@ -15,4 +15,5 @@ PIP INSTALLS ON VSCODE:
 **PY -M PIP INSTALL pyjokes**
 
 **PY -M PIP INSTALL pywhatkit**
+
 Please put in lowercase (Apart from specified modules eg,SpeechRecognition)
