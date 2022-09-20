@@ -3,8 +3,7 @@ import speech_recognition as sr
 import webbrowser
 import datetime
 import wikipedia
-import pyjokes
-
+print("welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close if mic not found")
 
 # this method is for taking the commands
 # and recognizing the command from the
@@ -18,7 +17,7 @@ def takeCommand():
 	# we will use the Microphone module
 	# for listening the command
 	with sr.Microphone() as source:
-		print('Listening...')
+		print('Listening')
 		
 		# seconds of non-speaking audio before
 		# a phrase is considered complete
@@ -30,17 +29,17 @@ def takeCommand():
 		# it is good else we will have exception
 		# handling
 		try:
-			print("Recognizing...")
+			print("Recognizing")
 			
 			# for Listening the command in indian
 			# english we can also use 'hi-In'
 			# for hindi recognizing
 			Query = r.recognize_google(audio, language='en-in')
-			print("Your Command =", Query)
+			print("the command is printed=", Query)
 			
 		except Exception as e:
 			print(e)
-			speak("Say that again Ifarnee")
+			print("Say that again sir")
 			return "None"
 		
 		return Query
@@ -54,7 +53,7 @@ def speak(audio):
 	
 	# setter method .[0]=male voice and
 	# [1]=female voice in set Property.
-	engine.setProperty('voice', voices[1].id)
+	engine.setProperty('voice', voices[0].id)
 	
 	# Method for the speaking of the assistant
 	engine.say(audio)
@@ -93,14 +92,14 @@ def tellTime():
 	print(time)
 	hour = time[11:13]
 	min = time[14:16]
-	speak("The time is sir" + hour + "Hours and" + min + "Minutes")
+	speak(self, "The time is sir" + hour + "Hours and" + min + "Minutes")
 
 def Hello():
 	
 	# This function is for when the assistant
 	# is called it will say hello and then
 	# take query
-	speak("Hi Ifarnee, How may I help you")
+	speak("hello if arnee I am your desktop assistant Tell me how may I help you")
 
 
 def Take_query():
@@ -120,75 +119,26 @@ def Take_query():
 		# query matches and we get the perfect
 		# output
 		query = takeCommand().lower()
-		if "open games" in query:
-			speak("Opening Games ")
+		if "open google" in query:
+			speak("Opening Google ")
 			
 			# in the open method we just to give the link
 			# of the website and it automatically open
 			# it in your default browser
-			webbrowser.open("https://www.coolmathgames.com/")
+			webbrowser.open("www.google.com")
 			continue
-		
-		elif "search" in query:
-                        import pywhatkit as kt
-                        speak("loading google search")
-                        target = query
-                        kt.search(query)
 			
-
-		elif "translate" in query:
-			speak("loading translator ")
-			webbrowser.open("https://translate.google.com/")
-			continue
-
-		elif "play classic fm" in query:
-			speak("opening classic fm in you browser")
-			webbrowser.open("https://www.globalplayer.com/live/classicfm/uk/")
-			continue
-
-		elif "play premier praise" in query:
-			speak("opening premier praise in you browser")
-			webbrowser.open("https://www.premierpraise.com/radio-windowed")
-			continue
-
-		
-
-		elif "music" in query:
-			speak("playing music ")
-			webbrowser.open("https://www.youtube.com/watch?v=l_9y2czDCaY")
-			continue
-
-		elif "joke" in query:
-			speak("Ok,  Let me think ")
-			joke=pyjokes.get_joke(language='en', category= 'neutral')
-			speak(joke)
-			speak("hahaha ")
-
-
-		elif "created you" in query:
-			speak("Coder Ifarnee created me, I will take you to his website and github account ")
-			webbrowser.open("https://github.com/CoderIfeanyi")
-			webbrowser.open("https://coderifeanyi.github.io/Ifeanyi-Website/")
-			continue
-
-		elif "homework" in query:
-			speak("opening homework sites ")
-			webbrowser.open("https://www.satchelone.com/")
-			webbrowser.open("https://vle.mathswatch.co.uk/vle/")
-			continue
-
-               
-		elif "day" in query:
+		elif "which day it is" in query:
 			tellDay()
 			continue
 		
-		elif "time" in query:
+		elif "tell me the time" in query:
 			tellTime()
 			continue
 		
 		# this will exit and terminate the program
 		elif "close program" in query:
-			speak("goodBye. Check Out CoderIfarnee on Github for more projects")
+			speak("Bye. Check Out GFG for more exciting things")
 			exit()
 		
 		elif "who is" in query:
@@ -205,8 +155,8 @@ def Take_query():
 			speak("According to wikipedia")
 			speak(result)
 		
-		elif "your name" in query:
-			speak("I am PYDER. Coded by Coder Ifarnee and your Virtual assistant")
+		elif "tell me your name" in query:
+			speak("I am PYDER. Your desktop Assistant")
 
 if __name__ == '__main__':
 	
