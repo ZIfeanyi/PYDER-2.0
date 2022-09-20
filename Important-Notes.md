@@ -1,12 +1,17 @@
 # PYDER-2.0
 
-This program needs a microphone to work: the code will automatically close on itself if a microphone of some sort is not found
+**THIS PROGRAM NEEDS A MICROPHONE TO WORK: THE CODE WILL AUTOMATICALLY CLOSE ON ITSELF IF A MICROPHONE OF SOME SORT IS NOT FOUND**
 
-pip installs:
-on vscode: 
-py -m pip install pyttsx3
-py -m pip install SpeechRecognition
-py -m pip install datetime (If not already installed)
-py -m pip install wikipedia
-py -m pip install pyjokes
-py -m pip install pywhatkit
+**PIP INSTALLS ON VSCODE: **
+
+**PY -M PIP INSTALL PYTTSX3**
+
+**PY -M PIP INSTALL SPEECHRECOGNITION**
+
+**PY -M PIP INSTALL DATETIME (IF NOT ALREADY INSTALLED)**
+
+**PY -M PIP INSTALL WIKIPEDIA**
+
+**PY -M PIP INSTALL PYJOKES**
+
+**PY -M PIP INSTALL PYWHATKIT**
