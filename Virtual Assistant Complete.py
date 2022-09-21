@@ -3,7 +3,7 @@ import speech_recognition as sr
 import webbrowser
 import datetime
 import wikipedia
-print("welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close if mic not found")
+print("welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close if mic not found\nTo view commands, say commands:")
 
 # this method is for taking the commands
 # and recognizing the command from the
@@ -62,6 +62,7 @@ def speak(audio):
 	# queued commands
 	engine.runAndWait()
 
+	
 def tellDay():
 	
 	# This function is for telling the
@@ -99,7 +100,8 @@ def Hello():
 	# This function is for when the assistant
 	# is called it will say hello and then
 	# take query
-	speak("hello if arnee I am your desktop assistant, Tell me how may I help you")
+
+	speak("hello if arnee, how may I help you")
 
 
 def Take_query():
@@ -134,6 +136,7 @@ def Take_query():
 			speak("loading translator ")
 			webbrowser.open("https://translate.google.com/")
 			continue
+
 
 		elif "play classic fm" in query:
 			speak("opening classic fm in you browser")
