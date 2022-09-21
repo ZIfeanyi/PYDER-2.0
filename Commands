@@ -8,6 +8,7 @@ pip install pyjokes
 pip install pyttsx3
 pip install 
 pip install SpeechRecognition
+pip install pywhatkit
 
 These are its commands:
 
