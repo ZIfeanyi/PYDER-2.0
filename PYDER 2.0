@@ -3,7 +3,7 @@ import speech_recognition as sr
 import webbrowser
 import datetime
 import wikipedia
-print("Welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close if mic not found\n\nTo view commands, say commands:")
+print("Welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close or will not work if mic not found\n\nTo view commands, say commands:")
 
 # this method is for taking the commands
 # and recognizing the command from the
@@ -136,6 +136,14 @@ def Take_query():
 			speak("loading translator ")
 			webbrowser.open("https://translate.google.com/")
 			continue
+
+
+		elif "commands" in query:
+			speak("commands ")
+			webbrowser.open("https://github.com/CoderIfeanyi/PYDER-2.0/blob/main/Commands")
+			continue
+
+
 
 
 		elif "play classic fm" in query:
