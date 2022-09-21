@@ -3,7 +3,7 @@ import speech_recognition as sr
 import webbrowser
 import datetime
 import wikipedia
-print("welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close if mic not found\nTo view commands, say commands:")
+print("Welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close if mic not found\n\nTo view commands, say commands:")
 
 # this method is for taking the commands
 # and recognizing the command from the
