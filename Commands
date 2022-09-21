@@ -1,0 +1,26 @@
+# PYDER-2.0
+Welcome to PYDER 2.0
+
+To run this program you will need to install:
+
+pip install wikipedia
+pip install pyjokes
+pip install pyttsx3
+pip install 
+pip install SpeechRecognition
+
+These are its commands:
+
+play classic fm
+who is _____________
+open games
+open homework
+open google
+play music
+what is the time
+what is the day
+close program
+
+Extras:
+Tell me your name
+Who created you
