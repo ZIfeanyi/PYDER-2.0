@@ -4,6 +4,7 @@ import webbrowser
 import datetime
 import wikipedia
 import pyjokes
+import subprocess,os
 print("Welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close or will not work if mic not found\n\nTo view commands, say commands:")
 
 # this method is for taking the commands
@@ -144,11 +145,14 @@ def Take_query():
 
 
 		elif "commands" in query:
-			speak("commands ")
+			speak("opening commands ")
 			webbrowser.open("https://github.com/CoderIfeanyi/PYDER-2.0/blob/main/Commands")
 			continue
 
-
+		elif "camera" in query:
+			speak("opening camera ")
+			import subprocess, os
+			subprocess.run('start microsoft.windows.camera:', shell=True)
 
 
 		elif "play classic fm" in query:
@@ -173,6 +177,8 @@ def Take_query():
 			joke=pyjokes.get_joke(language='en', category= 'neutral')
 			speak(joke)
 			speak("hahaha ")
+			
+
 
 
 		elif "created you" in query:
