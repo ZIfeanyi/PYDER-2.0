@@ -6,7 +6,7 @@ To run this program you will need to install:
 pip install wikipedia
 pip install pyjokes
 pip install pyttsx3
-pip install 
+pip install pyaudio
 pip install SpeechRecognition
 pip install pywhatkit
 pip install datetime (If not already installed)
@@ -21,6 +21,7 @@ open google
 play music
 what is the time
 what is the day
+open camera
 close program
 
 Extras:
