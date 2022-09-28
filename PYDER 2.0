@@ -13,7 +13,7 @@ def connect(host='http://google.com'):
     except:
         return False
 # test
-print( "Loading Wifi" if connect() else "no internet!" )
+print( "Wifi Connected" if connect() else "no internet!" )
 
 print("Welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close or will not work if mic not found\n\nTo view commands, say commands:")
 
