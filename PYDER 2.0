@@ -1,10 +1,20 @@
 import pyttsx3
-import speech_recognition as sr
-import webbrowser
-import datetime
+import speech_recognition as sr																																																																														
+import webbrowser																																	
+import datetime																														
 import wikipedia
 import pyjokes
 import subprocess,os
+import urllib.request
+def connect(host='http://google.com'):
+    try:
+        urllib.request.urlopen(host) #Python 3.x
+        return True
+    except:
+        return False
+# test
+print( "Loading Wifi" if connect() else "no internet!" )
+
 print("Welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close or will not work if mic not found\n\nTo view commands, say commands:")
 
 # this method is for taking the commands
@@ -125,7 +135,7 @@ def Take_query():
 			
 			# in the open method we just to give the link
 			# of the website and it automatically open
-			# it in your default browser
+			# it in your default browser most likely chrome
 			webbrowser.open("https://www.coolmathgames.com/")
 			continue
 		
