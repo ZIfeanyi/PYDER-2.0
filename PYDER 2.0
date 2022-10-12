@@ -158,6 +158,11 @@ def Take_query():
 			speak("opening commands ")
 			webbrowser.open("https://github.com/CoderIfeanyi/PYDER-2.0/blob/main/Commands")
 			continue
+			
+		elif "extra" in query:
+			webbrowser.open("https://coderifeanyi.github.io/PYDER---Terminal/")
+	    
+			continue
 
 		elif "camera" in query:
 			speak("opening camera ")
