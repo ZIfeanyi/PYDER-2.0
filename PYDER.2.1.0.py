@@ -21,7 +21,7 @@ def connect(host='http://google.com'):
 print( "Wifi Connected" if connect() else "no internet!" )
 
 print("Welcome to ifeanyi's virtual assistant app: you need a mic to use this application\nprogram will close or will not work if mic not found\n\nTo view commands, say commands:\nTo open Extra say 'Extra'")
-
+print("© Copyright 2022 Ifeanyi Onuama. All rights reserved")
 # this method is for taking the commands
 # and recognizing the command from the
 # speech_Recognition module we will use
@@ -107,7 +107,34 @@ def tellTime():
         current_time = time.strftime("%H:%M:%S", t)
         speak("the time:")
         print(current_time)
+def maths():
+    webbrowser.open("www.mathswatch.com")
 
+def english():
+    webbrowser.open("www.commonlit.com")
+
+def science():
+    webbrowser.open("www.tassomai.com")
+
+def languages():
+    webbrowser.open("https://zut.languageskills.co.uk/")
+
+
+def homework():
+    speak("What type of homework would you like to open")
+    homework = input("Maths, Science, English, Language: ")
+    if homework == 'maths':
+        maths()
+
+    if homework == 'science':
+        science()
+
+    if homework == 'language':
+        languages()
+        
+    if homework == 'english':
+        english()
+        
 def tellAge():
 
         import time
@@ -226,9 +253,7 @@ def Take_query():
 			continue
 
 		elif "homework" in query:
-			speak("opening homework sites ")
-			webbrowser.open("https://www.satchelone.com/")
-			webbrowser.open("https://vle.mathswatch.co.uk/vle/")
+			homework()
 			continue
 
                
